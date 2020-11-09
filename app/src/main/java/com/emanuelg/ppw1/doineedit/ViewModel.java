@@ -9,7 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class ViewModel extends androidx.lifecycle.ViewModel {
 
 
-    // TODO: Implement the ViewModel
+
     public final String name;
     public static Drawable image;
     public final String size;
