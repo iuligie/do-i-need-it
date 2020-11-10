@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="93dp"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="10dp"
+    android:background="@color/design_default_color_primary_dark"
+    android:gravity="end"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:visibility="invisible"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:layout_marginStart="320dp"
+    tools:showIn="@layout/item_recycler_view"
+    tools:visibility="invisible">
+
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="15dp"
+        android:insetLeft="0dp"
+        android:insetRight="10dp"
+        android:text="@string/undo"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="1dp"
+        android:insetRight="10dp"
+        android:text="@string/delete"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+</LinearLayout>

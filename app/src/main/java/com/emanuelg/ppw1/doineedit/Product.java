@@ -41,21 +41,21 @@ public class Product {
     public static List<Product> getProducts() {
 
         list.add(
-                new Product("Shiorsat", "price", "color", "$10"));
+                new Product("Shiorsat", "price", "color", "10"));
         list.add(new Product("Shirts", "price", "color",
-                "$20"));
+                "20"));
         list.add(
-                new Product("Socks",  "price", "color", "$10"));
-        list.add(new Product("Shirts",  "price", "color",
-                "$20"));
+                new Product("Socks", "price", "color", "10"));
+        list.add(new Product("Shirts", "price", "color",
+                "20"));
         list.add(
-                new Product("Socks",  "price", "color", "$10"));
-        list.add(new Product("Shirts",  "price", "color",
-                "$20"));
+                new Product("Socks", "price", "color", "10"));
+        list.add(new Product("Shirts", "price", "color",
+                "20"));
         list.add(
-                new Product("Socks",  "price", "color", "$10"));
-        list.add(new Product("Shirts",  "price", "color",
-                "$20"));
+                new Product("Socks", "price", "color", "10"));
+        list.add(new Product("Shirts", "price", "color",
+                "20"));
 
         return list;
     }

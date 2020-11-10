@@ -54,7 +54,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Produc
         if(list!=null){
             Product current=list.get(position);
             holder.name.setText(current.name);
-            holder.price.setText(current.getPrice());
+            holder.price.setText("£" + current.getPrice());
             holder.img_product.setImageResource(R.drawable.img_item);
             holder.isOwned.setOnCheckedChangeListener((compoundButton, b) -> current.setOwned(b));
 

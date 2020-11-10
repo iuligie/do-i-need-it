@@ -23,4 +23,18 @@
     <string name="enter_product_name">Enter Product Name</string>
     <string name="enter_product_price">Enter Product Price</string>
     <string name="btn_add">Add</string>
+    <string name="register">Register</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_an_user">Already an user?</string>
+    <string name="last_name">Last Name</string>
+    <string name="prompt_LastName">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="owned">Owned</string>
+    <string name="username_or_email">Username or email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="keep_me_signed_in">Keep me signed in</string>
+    <string name="new_user">New user?</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="undo">Undo</string>
+    <string name="delete">Delete</string>
 </resources>
