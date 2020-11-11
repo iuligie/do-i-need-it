@@ -5,13 +5,27 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
+    <!--
+    This layout is design to be as consistent with the register layout
+    as possible so the user will feel comfortable navigating through the
+    two pages. In terms of frequency, this page will be accessed very
+    rarely since the user has the option to have their authentication
+    details remembered so they won't have to authenticate every time
+    they access the application.
+    This layout is consistent with material design concepts as it was
+    created based on the authentication material form examples
+    available online. The fonts are consistent with the theme
+    and the colors are consistent with the dark theme implemented
+    in the entire application.
 
-    <EditText
+    -->
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -26,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -84,6 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_mono"
         android:text="@string/sign_in"
         android:textAlignment="center"
         android:textSize="36sp"
@@ -117,6 +132,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_mono"
         android:text="@string/new_user"
         android:textAlignment="viewStart"
         android:textSize="18sp"

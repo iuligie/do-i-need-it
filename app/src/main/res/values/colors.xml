@@ -7,9 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="navy_700">#3700b3</color>
+    <color name="navy_900">#23036A</color>
+    <color name="green_300">#81c784</color>
+    <color name="green_500">#4caf50</color>
     <!-- COLOR FROM ASSETS PANEL -->
-
+    <color name="dark_grey">#121212</color>
     <color name="color_button">#34ffc8</color>
     <color name="color_title">#eee</color>
     <color name="color_check_Mark">#71ffd7</color>

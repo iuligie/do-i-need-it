@@ -2,57 +2,98 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/dark_grey"
+    android:minWidth="500dp"
     android:orientation="vertical"
+    app:layout_constraintCircleRadius="26dp"
     tools:context=".ui.ProductsFragment">
+    <!--
+    This file is the layout linked to a fragment that will be opened
+    as a dialog when the floating action button will be pressed
 
+    In this layout, in order to implement material design, resources
+    specific to material design system such as Roboto font family and elements
+    derived from material design libary.
+    -->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:fontFamily="@font/roboto_mono"
         android:text="@string/add_new_product"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="#DEFFFFFF"
         android:textSize="24sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_layout_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_product_name" />
+            android:hint="@string/enter_product_name"
+            android:textColor="#DEFFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <!--
+    In the input fields the user will enter the details specific to the hints displayed
+    in each layout e.g. Item Name, Item Price.
 
+    To assure accessibility, the text color is displayed with 87% opacity
+    as the material design guidelines recommend.
+
+    -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_layout_price"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        app:helperTextEnabled="false">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_product_price"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="#DEFFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <!--
+    The following text view is clickable and has the role of
+    initiating an action. WHen this is clicked, a new item
+     is added to the list. I had trouble implementing a borderless
+    material button due to an unexpected error. Although is not
+    an element designed according to material system principles,
+    I tried my best to make it look like a borderless button
+    that would usually show up alongside a card or a dialog.
+    -->
+    <TextView
         android:id="@+id/btn_add"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_button"
-        android:text="@string/btn_add"
-        android:textColor="@android:color/white" />
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="@string/add_item"
+        android:textAlignment="textEnd"
+        android:textAllCaps="true"
+        android:textColor="#6200EA"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -4,104 +4,129 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-   <!--<data>
-
-        <variable
-           name="viewModel"
-            type="com.emanuelg.ppw1.doineedit.Product"/>
-    </data>
-
-
-                android:onClick="@{() -> viewModel.onClickUndo()}"
-
-                android:onClick="@{() -> viewModel.onClickDelete()}"
-    -->
-    <LinearLayout
+    <!-- This page contains the design of on item of the products list.
+    The reason there is a <layout> tag containing a linear layout is for future development purposes
+    as this layout tag will contain the variables needed for data binding when the back-end
+    of the project will be linked to the front-end
+     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recyclerview_item"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/item_card"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
+            style="@style/Widget.App.CardView"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#121212"
-            app:cardCornerRadius="25dp"
-            app:contentPadding="2dp">
+            android:layout_marginEnd="8dp"
+            android:elevation="6dp"
+            app:cardBackgroundColor="@color/dark_grey"
+            app:cardCornerRadius="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:elevation="6dp">
 
+            <!--
+            The following layout is design having material design concepts in mind
+            as well as future development.
+           The color is inspired by google's material design case study Rally,
+           having the same dark theme with contrasted key item.
+
+           The image view attributes are set so that the image will fill the entire
+           width of the card as material design guidelines recommend.
+            -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/foreground"
+                android:id="@+id/layout_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#121212">
+                android:background="#1E1E1E"
+                android:backgroundTint="#242424">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="100dp"
+                    android:contentDescription="@string/todo"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.062"
+                    app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                    app:srcCompat="@drawable/img_item"
+                    tools:srcCompat="@drawable/img_item" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:buttonTint="#AA00FF"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="48dp"
+                    android:buttonTint="#BB86FC"
                     android:fontFamily="@font/roboto_condensed_regular"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     android:text="@string/owned"
                     android:textAllCaps="true"
-                    android:textColor="#DEAA00FF"
-                    android:textSize="12sp"
+                    android:textColor="#BB86FC"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtPrice" />
-
-                <ImageView
-                    android:contentDescription="TODO"
-                    android:id="@+id/img_item"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/img_item"
-                    tools:srcCompat="@drawable/img_item" />
-
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_item" />
+                <!--
+                Both TextView elements have text with 87% opacity as material design recommends
+                in order to assure accessibility and to emphasize the text.
+                -->
                 <TextView
                     android:id="@+id/txtTitle"
-                    android:layout_width="232dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
                     android:autoSizeTextType="uniform"
                     android:fontFamily="@font/roboto_medium"
                     android:textAlignment="viewStart"
                     android:textColor="#DEFFFFFF"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_item"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.153"
-                    tools:text="Samsung Galaxy S10 Plus" />
+                    app:layout_constraintEnd_toStartOf="@+id/checkBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_item"
+                    tools:text="Product Item" />
 
                 <TextView
                     android:id="@+id/txtPrice"
-                    android:layout_width="118dp"
-                    android:layout_height="41dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
                     android:autoSizeTextType="uniform"
                     android:fontFamily="@font/roboto_condensed_regular"
                     android:textAlignment="viewStart"
                     android:textColor="#99FFFFFF"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toEndOf="@+id/img_item"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBox"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtTitle"
                     tools:text="£789" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-    </LinearLayout></layout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -37,4 +37,6 @@
     <string name="create_an_account">Create an account</string>
     <string name="undo">Undo</string>
     <string name="delete">Delete</string>
+    <string name="add_item">ADD ITEM</string>
+    <string name="todo">TODO</string>
 </resources>

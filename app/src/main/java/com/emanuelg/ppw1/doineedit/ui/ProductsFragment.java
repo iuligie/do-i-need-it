@@ -1,22 +1,16 @@
 package com.emanuelg.ppw1.doineedit.ui;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.emanuelg.ppw1.doineedit.Product;
 import com.emanuelg.ppw1.doineedit.R;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 public class ProductsFragment extends DialogFragment {
@@ -59,7 +53,7 @@ public class ProductsFragment extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.dialog_fragment_add_product, container);
 
-        Button btn_add = root.findViewById(R.id.btn_add);
+        TextView btn_add = root.findViewById(R.id.btn_add);
         TextView txtName = root.findViewById(R.id.edit_text_name);
         TextView txtPrice = root.findViewById(R.id.edit_text_price);
         btn_add.setOnClickListener(view -> {
